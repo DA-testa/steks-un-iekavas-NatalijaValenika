@@ -39,7 +39,7 @@ def main():
             print("Success")
         else:
             print(mismatch)
-        eleif "I" in text:
+        elseif "I" in text:
             text1 = input()
             mismatch = find_mismatch(text1)
             if mismatch == "Success":
