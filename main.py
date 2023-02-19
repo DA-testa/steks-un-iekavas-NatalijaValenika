@@ -30,22 +30,11 @@ def find_mismatch(text):
             
 def main():
     text = input("F or I")
-    if "F" in text:
-        name = input("Enter file name: ")
-        with open(name, "r", enconding="latinl") as file:
-            text1=file.read()
-        mismatch = find.mismatch(text1)
-        if mismatch == "Success":
-            print("Success")
-        else:
-            print(mismatch)
-        elif "I" in text:
-            text1 = input()
-            mismatch = find_mismatch(text1)
-            if mismatch == "Success":
-                print("Success")
-            else:
-                print (mismatch)
+    mismatch = find_mistach(text)
+    if "I" in text:
+        text = input()
+        mismatch = find_mismatch(text)
+        print(mismatch)
 
 
 if __name__ == "__main__":
