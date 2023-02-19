@@ -13,8 +13,7 @@ def find_mismatch(text):
     opening_brackets_stack = []
     for i, next in enumerate(text):
         if next in "([{":
-            opening_brackets_stack.append(Bracket(next, i+1))
-            pass
+            opening_brackets_stack.append(Bracket(next, i))
 
         if next in ")]}":
             if not opening_brackets_stack:
@@ -22,7 +21,6 @@ def find_mismatch(text):
             top = opening_brackets_stack.pop()
             if not are_matching(top.char, next):
                 return i+1
-            pass
         
         if opening_brackets_stack:
             return opening_brackets_stack[0].position
