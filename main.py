@@ -31,7 +31,7 @@ def find_mismatch(text):
 def main():
     text = input("F or I")
     if "F" in text:
-        name input("Enter file name: ")
+        name = input("Enter file name: ")
         with open(name, "r", enconding="latinl") as file:
             text1=file.read()
         mismatch = find.mismatch(text1)
